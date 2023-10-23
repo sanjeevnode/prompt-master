@@ -1,6 +1,5 @@
 import User from "@models/user";
 import { connectToDatabase } from "@utils/database";
-export const dynamic = "force-dynamic";
 export const GET = async (req, { params }) => {
   try {
     await connectToDatabase();
@@ -11,3 +10,4 @@ export const GET = async (req, { params }) => {
     return new Response(error.message, { status: 500 });
   }
 };
+export const dynamic = "force-dynamic";
